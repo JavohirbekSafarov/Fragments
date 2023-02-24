@@ -1,9 +1,9 @@
 package com.javohirbekcoder.fragments
-
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.javohirbekcoder.fragments.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
                     laodFragment(Home_Fragment())
                     true
                 }
-                R.id.seach -> {
+                R.id.search-> {
                     laodFragment(Search_Fragment())
                     true
                 }
@@ -49,6 +49,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun laodFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
+        transaction.setCustomAnimations(
+            R.anim.slide_in,
+            R.anim.slide_out,
+            R.anim.slide_in,
+            R.anim.slide_out
+        )
         transaction.replace(R.id.container, fragment)
         transaction.commit()
     }
