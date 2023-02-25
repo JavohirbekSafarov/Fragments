@@ -1,4 +1,5 @@
 package com.javohirbekcoder.fragments
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                     laodFragment(Home_Fragment())
                     true
                 }
-                R.id.search-> {
+                R.id.search -> {
                     laodFragment(Search_Fragment())
                     true
                 }
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
 
     private fun laodFragment(fragment: Fragment) {
